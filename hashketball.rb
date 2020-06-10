@@ -151,7 +151,10 @@ def player_numbers(team)
 end
 
 def num_points_scored(player)
-  player_helper[0][player][:points]
+  player_helper.each do |hash|
+    binding.pry
+    puts hash
+  end 
 end
 
-# binding.pry
+binding.pry
