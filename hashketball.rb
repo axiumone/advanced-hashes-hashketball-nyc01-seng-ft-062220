@@ -153,7 +153,7 @@ end
 def num_points_scored(player)
   player_helper.each do |hash|
     if hash[:player_name] == player
-      hash[:player_name][:points]
+      puts hash[:player_name][:points]
       binding.pry
     end
   end
