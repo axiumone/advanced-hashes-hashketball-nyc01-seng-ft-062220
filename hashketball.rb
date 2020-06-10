@@ -127,6 +127,8 @@ def game_hash
   }
 end
 
+# player_helper, get_team_helper, player_numbers and num_points scored use code snipets found in the debugging video tutorial.
+
 def player_helper
   game_hash[:home][:players].concat(game_hash[:away][:players])
 
@@ -152,4 +154,4 @@ def num_points_scored(player)
   player_helper[0][player][:points]
 end
 
-# binding.pry
+binding.pry
