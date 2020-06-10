@@ -149,9 +149,6 @@ def player_numbers(team)
 end
 
 def num_points_scored(player)
-  player_helper.each do |pla|
-    puts pla[:player][:score]
-  end
+  player_helper[:player][:score]
 end
 
-binding.pry
