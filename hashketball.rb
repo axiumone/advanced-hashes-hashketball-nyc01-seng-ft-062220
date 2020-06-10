@@ -152,6 +152,8 @@ end
 
 def num_points_scored(player)
   player_helper.each do |hash|
-    puts hash
+    if hash[:player_name] == player
+      puts "FOUND PLAYER!!!"
+    end
   end
 end
