@@ -154,4 +154,4 @@ def num_points_scored(player)
   player_helper[0][player][:points]
 end
 
-binding.pry
+# binding.pry
