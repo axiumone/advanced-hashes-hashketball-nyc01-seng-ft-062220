@@ -1,10 +1,11 @@
-# Write your code below game_hash
+require 'pry'
+
 def game_hash
   {
     home: {
       team_name: "Brooklyn Nets",
       colors: ["Black", "White"],
-      players: [
+      players: {
         {
           player_name: "Alan Anderson",
           number: 0,
@@ -60,12 +61,12 @@ def game_hash
           blocks: 11,
           slam_dunks: 1
         }
-      ]
+      }
     },
     away: {
       team_name: "Charlotte Hornets",
       colors: ["Turquoise", "Purple"],
-      players: [
+      players: {
         {
           player_name: "Jeff Adrien",
           number: 4,
@@ -121,9 +122,38 @@ def game_hash
           blocks: 5,
           slam_dunks: 12
         }
-      ]
+      }
     }
   }
 end
 
-# Write code here
+def player_helper
+  game_hash[:home][:players].merge(game_hash[:away][:players])
+
+end
+
+binding.pry
+
+def get_team_helper(team)
+  case team
+  when game_hash[:home][:team_name]
+    game_hash[:home]
+  when game_hash[:away][:team_name]
+    game_hash[:away]
+  end
+end
+
+def player_numbers(team)
+  get_team(team)[:players].map do |players|
+    player[:number]
+  end
+end
+
+def num_points_scored(player)
+  player_helper.each do |pla|
+    puts pla[:player][:score]
+  end
+end
+
+
+# binding.pry
