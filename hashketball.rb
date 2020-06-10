@@ -132,7 +132,6 @@ def player_helper
 
 end
 
-binding.pry
 
 def get_team_helper(team)
   case team
