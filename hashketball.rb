@@ -144,7 +144,7 @@ end
 
 def player_numbers(team)
   get_team_helper(team)[:players].map do |players|
-    player[:number]
+    players[:number]
   end
 end
 
